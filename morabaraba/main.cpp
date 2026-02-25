@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <fstream>
-//change 
+
 using namespace std;
 
 struct Game{
