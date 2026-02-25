@@ -58,13 +58,15 @@ public:
 int main()
 {
     Game g;
-    int cow;
+      int num_cows;
     int score;
 
 
-    g.input >> cow;
+    g.input >> num_cows;
 
-    switch(cow)
+
+
+    switch(num_cows)
     {
 
     case 4:
