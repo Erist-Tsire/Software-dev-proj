@@ -17,6 +17,14 @@ struct Game{
 
     }
 
+    Placement(){
+    // add placement info here
+    }
+
+    Movement(){
+    // add movement info here
+    }
+
 };
 
 class Intersection{
@@ -53,6 +61,20 @@ public:
 
 
 };
+
+class Mill{
+//define a mill
+//how a mill is formed
+// maybe define mill under Game class
+
+};
+
+string Alg_1(){
+    //not sure if I should do it like tgis or just have a class for it
+
+}
+
+
 
 
 int main()
