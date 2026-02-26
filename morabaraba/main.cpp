@@ -17,11 +17,11 @@ struct Game{
 
     }
 
-    Placement(){
+    void Placement(){
     // add placement info here
     }
 
-    Movement(){
+    void Movement(){
     // add movement info here
     }
 
