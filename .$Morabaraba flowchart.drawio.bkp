@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="818" dy="394" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2329" dy="1138" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -77,7 +77,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-34" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;" value="Alg_1 and Alg_2 take turns moving a cow to an adjucent empty slot" vertex="1">
+        <mxCell id="0FB75MxLYGXjSZG2kcan-34" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;" value="Alg_1 and Alg_2 take turns moving a cow to an adjacent empty slot" vertex="1">
           <mxGeometry height="60" width="120" x="70" y="580" as="geometry" />
         </mxCell>
         <mxCell id="0FB75MxLYGXjSZG2kcan-46" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0FB75MxLYGXjSZG2kcan-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="0FB75MxLYGXjSZG2kcan-10">
@@ -112,25 +112,25 @@
         <mxCell id="0FB75MxLYGXjSZG2kcan-55" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0FB75MxLYGXjSZG2kcan-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="0FB75MxLYGXjSZG2kcan-50" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-53" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;" value="Alg_1 moves a cow to an empty adjuscent spot on the board" vertex="1">
+        <mxCell id="0FB75MxLYGXjSZG2kcan-53" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;" value="current player moves a cow to an empty adjacent spot on the board" vertex="1">
           <mxGeometry height="60" width="120" x="580" y="580" as="geometry" />
         </mxCell>
         <mxCell id="0FB75MxLYGXjSZG2kcan-59" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0FB75MxLYGXjSZG2kcan-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="0FB75MxLYGXjSZG2kcan-34" value="">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-56" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;" value="Alg_2 moves a cow to an empty adjuscent spot on the board" vertex="1">
+        <mxCell id="0FB75MxLYGXjSZG2kcan-56" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;" value="opponent moves a cow to an empty adjacent spot on the board" vertex="1">
           <mxGeometry height="60" width="120" x="240" y="580" as="geometry" />
         </mxCell>
         <mxCell id="0FB75MxLYGXjSZG2kcan-58" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="No" vertex="1">
           <mxGeometry height="30" width="60" x="370" y="585" as="geometry" />
         </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-76" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0FB75MxLYGXjSZG2kcan-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="0FB75MxLYGXjSZG2kcan-34">
+        <mxCell id="mpE-KP56iykKjVkT3kau-4" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0FB75MxLYGXjSZG2kcan-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="mpE-KP56iykKjVkT3kau-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-82" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0FB75MxLYGXjSZG2kcan-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="0FB75MxLYGXjSZG2kcan-81" value="">
+        <mxCell id="mpE-KP56iykKjVkT3kau-19" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0FB75MxLYGXjSZG2kcan-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="0FB75MxLYGXjSZG2kcan-91">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-63" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rhombus;whiteSpace=wrap;html=1;" value="Does a player have less than 3 cows left on the board?" vertex="1">
+        <mxCell id="0FB75MxLYGXjSZG2kcan-63" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rhombus;whiteSpace=wrap;html=1;" value="Does current player have less than 3 cows left on the board?" vertex="1">
           <mxGeometry height="110" width="150" x="385" y="790" as="geometry" />
         </mxCell>
         <mxCell id="0FB75MxLYGXjSZG2kcan-65" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Yes" vertex="1">
@@ -142,38 +142,14 @@
         <mxCell id="0FB75MxLYGXjSZG2kcan-73" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;" value="The player that made a mill takes one of the opponent&#39;s cows" vertex="1">
           <mxGeometry height="60" width="120" x="400" y="680" as="geometry" />
         </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-77" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="No" vertex="1">
-          <mxGeometry height="30" width="60" x="244" y="810" as="geometry" />
-        </mxCell>
         <mxCell id="0FB75MxLYGXjSZG2kcan-80" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Yes" vertex="1">
           <mxGeometry height="30" width="60" x="527.5" y="810" as="geometry" />
-        </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-90" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0FB75MxLYGXjSZG2kcan-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="0FB75MxLYGXjSZG2kcan-87" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-92" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0FB75MxLYGXjSZG2kcan-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="0FB75MxLYGXjSZG2kcan-91" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-81" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rhombus;whiteSpace=wrap;html=1;" value="Does Alg_1 have less than 3 cows left on board" vertex="1">
-          <mxGeometry height="95" width="105" x="587.5" y="797.5" as="geometry" />
-        </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-86" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="No" vertex="1">
-          <mxGeometry height="30" width="60" x="580" y="900" as="geometry" />
-        </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-100" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0FB75MxLYGXjSZG2kcan-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="0FB75MxLYGXjSZG2kcan-94">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-87" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;" value="Alg_1 wins" vertex="1">
-          <mxGeometry height="50" width="120" x="580" y="950" as="geometry" />
         </mxCell>
         <mxCell id="0FB75MxLYGXjSZG2kcan-99" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="0FB75MxLYGXjSZG2kcan-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="0FB75MxLYGXjSZG2kcan-94">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-91" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;" value="Alg_2 wins" vertex="1">
+        <mxCell id="0FB75MxLYGXjSZG2kcan-91" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;" value="Opponent wins" vertex="1">
           <mxGeometry height="60" width="120" x="765" y="815" as="geometry" />
-        </mxCell>
-        <mxCell id="0FB75MxLYGXjSZG2kcan-93" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Yes" vertex="1">
-          <mxGeometry height="30" width="60" x="695" y="820" as="geometry" />
         </mxCell>
         <mxCell id="0FB75MxLYGXjSZG2kcan-96" connectable="0" parent="WIyWlLk6GJQsqaUBKTNV-1" style="group" value="" vertex="1">
           <mxGeometry height="80" width="80" x="785" y="935" as="geometry" />
@@ -183,6 +159,37 @@
         </mxCell>
         <mxCell id="0FB75MxLYGXjSZG2kcan-95" parent="0FB75MxLYGXjSZG2kcan-96" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=light-dark(#1A1A1A,#000000);" value="" vertex="1">
           <mxGeometry height="50" width="50" x="15" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="mpE-KP56iykKjVkT3kau-5" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="mpE-KP56iykKjVkT3kau-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="846" />
+              <mxPoint x="110" y="640" />
+            </Array>
+            <mxPoint x="110" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mpE-KP56iykKjVkT3kau-17" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="mpE-KP56iykKjVkT3kau-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="mpE-KP56iykKjVkT3kau-16" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mpE-KP56iykKjVkT3kau-2" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rhombus;whiteSpace=wrap;html=1;" value="Can current player move?" vertex="1">
+          <mxGeometry height="97" width="100" x="170" y="797.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mpE-KP56iykKjVkT3kau-8" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Yes" vertex="1">
+          <mxGeometry height="30" width="60" x="110" y="815" as="geometry" />
+        </mxCell>
+        <mxCell id="mpE-KP56iykKjVkT3kau-18" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="mpE-KP56iykKjVkT3kau-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="0FB75MxLYGXjSZG2kcan-94">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="825" y="1035" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mpE-KP56iykKjVkT3kau-16" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;" value="opponent wins" vertex="1">
+          <mxGeometry height="60" width="120" x="160" y="993" as="geometry" />
+        </mxCell>
+        <mxCell id="mpE-KP56iykKjVkT3kau-20" parent="WIyWlLk6GJQsqaUBKTNV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="No" vertex="1">
+          <mxGeometry height="30" width="60" x="150" y="920" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
