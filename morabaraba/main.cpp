@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <fstream>
-//tshiamo
+
 using namespace std;
 
 struct Game{
@@ -24,6 +24,14 @@ struct Game{
     void Movement(){
     // add movement info here
     }
+
+    bool isMill(){
+//define a mill
+//how a mill is formed
+// maybe define mill under Game class
+    
+
+}
 
 };
 
@@ -62,12 +70,7 @@ public:
 
 };
 
-class Mill{
-//define a mill
-//how a mill is formed
-// maybe define mill under Game class
 
-};
 
 string Alg_1(){
     //not sure if I should do it like tgis or just have a class for it
