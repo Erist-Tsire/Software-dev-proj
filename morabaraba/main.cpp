@@ -5,24 +5,24 @@
 
 using namespace std;
 
-struct Game{
+const int EMPTY = 0; //f
+const int ALG_1 =1;
+const int ALG_2= 2;
 
-    ifstream input;
-    ofstream output;
 
-    Game(){
+   
 
-        input.open("input.txt");
-        output.open("output.txt");
-
-    }
-
-};
 
 class Intersection{
 public:
     string label;
-    Intersection(string label);
+    int status;
+    vector<string> adjacencies;
+
+    Intersection(): status(EMPTY) {}
+    Intersection(string lbl) :
+    label(lbl), status (EMPTY) {}
+
 
 };
 
@@ -30,22 +30,39 @@ public:
 class Square{
     public:
         string name;
+        vector<Intersections> Intersections;
 
-
-        vector<Intersection> i;
-        Square(string name, vector<Intersection> i);
+    Square (string n) : name(n) {
+        for (int j = 0; j<8; ++j){
+            intersections.push_back(Intersection(name + ",i" + to_string(j)));
+        }
+    }
 
 };
 
 
 class Board{
 public:
-    vector<Intersection> i;
-    vector<Square> s;
-    Board(){
-        s.push_back(Square("s1",i));
-        s.push_back(Square("s2",i));
-        s.push_back(Square("s3",i));
+
+    ifstream input("input.txt");
+    ofstream output("output.txt");
+
+    vector<Square> squares;
+    int TotalNumPieces;
+
+    Board(string input, string output){
+        squares.push_back(Square("S0"));
+        squares.push_back(Square("S1"));
+        square.push_back(Square("S2"));
+        
+        if (input.is_open()){
+            input>> TotalNumPieces;
+        }
+        else{
+            TotalNumPieces=4;
+        }
+        }
+        }
 
     }
 
