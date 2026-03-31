@@ -18,6 +18,8 @@ struct Game{
     }
 
     void Placement(){
+        bool isempty = false;// check if the spot is empty
+        // maybe have a function for isempty outside of the void
     // add placement info here
     }
 
@@ -26,10 +28,21 @@ struct Game{
     }
 
     bool isMill(){
+        bool ismill = true;
+        int n = 0;
 //define a mill
 //how a mill is formed
 // maybe define mill under Game class
-    
+    if(n=3){
+        ismill;
+    }
+    else{
+        return false;
+    }
+
+    bool isEndGame(){
+        
+    }
 
 }
 
@@ -58,22 +71,29 @@ class Board{
 public:
     vector<Intersection> i;
     vector<Square> s;
+
+    vector<vector<int>> board;
     Board(){
         s.push_back(Square("s1",i));
         s.push_back(Square("s2",i));
         s.push_back(Square("s3",i));
 
     }
-
-
-
+    void printBoard(){
+        for(const auto& row : board){
+            for(int cell : row){
+                cout << cell << " ";
+            }
+            cout << endl;
+        }
+    }
 
 };
 
 
 
-string Alg_1(){
-    //not sure if I should do it like tgis or just have a class for it
+string Alg_2(){
+    //not sure if I should do it like this or just have a class for it
 
 }
 
@@ -83,6 +103,7 @@ string Alg_1(){
 int main()
 {
     Game g;
+
       int num_cows;
     int score;
 
@@ -110,7 +131,7 @@ int main()
 
     }
 
-
+    
     g.output.close();
     g.input.close();
     return 0;
