@@ -2,6 +2,8 @@
 #include <vector>
 #include <string>
 #include <fstream>
+#include <cstdlib>
+
 
 using namespace std;
 
@@ -11,7 +13,7 @@ struct Game{
     //ifstream input;
     //ofstream output;
 
-  
+
 
 
 
@@ -53,65 +55,87 @@ struct Game{
 };
 
 
-class Intersection{
-public:
-    string label;
-    int status;
-     const int EMPTY = 0; 
-    vector<string> adjacencies;
 
-    Intersection(): status(EMPTY) {}
-    Intersection(string lbl) :
-    label(lbl), status (EMPTY) {}
-};
+/*class Intersection{
+public:
+    std::string label;
+    Intersection(std::string label);
+
+};*/
+
 
 class Square{
     public:
-        string name;
-        vector<Intersection> intersections;
+        std::string name;
 
-    Square (string n) : name(n) {
-        for (int j = 0; j<8; ++j){
-            intersections.push_back(Intersection(name + "i" + to_string(j)));
-        }
-    }
-
+    Square(string n) : name(n){}
 };
+
 
 class Board{
 public:
-    vector<Intersection> i;
+  //  vector<Intersection> i;
     vector<Square> s;
+     vector<int> boardState;
+    int TotalNumPieces;
 
-     int TotalNumPieces;
+    Board(int cows = 0) : TotalNumPieces(cows){
+        s.push_back(Square("s2 i0"));
+        s.push_back(Square("s2 i1"));
+        s.push_back(Square("s2 i2"));
+        s.push_back(Square("s2 i3"));
+        s.push_back(Square("s2 i4"));
+        s.push_back(Square("s2 i5"));
+        s.push_back(Square("s2 i6"));
+        s.push_back(Square("s2 i7"));
 
-    vector<vector<int>> board;
-    vector<Square> squares;
-   
-    Board()
-    {
-        squares.push_back(Square("S0"));
-        squares.push_back(Square("S1"));
-        squares.push_back(Square("S2"));
+        s.push_back(Square("s1 i0"));
+        s.push_back(Square("s1 i1"));
+        s.push_back(Square("s1 i2"));
+        s.push_back(Square("s1 i3"));
+        s.push_back(Square("s1 i4"));
+        s.push_back(Square("s1 i5"));
+        s.push_back(Square("s1 i6"));
+        s.push_back(Square("s1 i7"));
+
+        s.push_back(Square("s0 i0"));
+        s.push_back(Square("s0 i1"));
+        s.push_back(Square("s0 i2"));
+        s.push_back(Square("s0 i3"));
+        s.push_back(Square("s0 i4"));
+        s.push_back(Square("s0 i5"));
+        s.push_back(Square("s0 i6"));
+        s.push_back(Square("s0 i7"));
+
+        boardState.resize(s.size(), 0);
+
     }
-    void printBoard(){
-        for(const auto& row : board){
-            for(int cell : row){
-                cout << cell << " ";
-            }
+
+    void placePiece(int idx, int player) {
+        if (idx >= 0 && idx < (int)s.size() && boardState[idx] == 0) {
+            boardState[idx] = player;
+        }
+    }
+
+
+    void printBoard() const {
+        for (int i = 0; i < (int)s.size(); ++i) {
+            cout << s[i].name << ": ";
+            if (boardState[i] == 0) cout << "EMPTY";
+            else if (boardState[i] == 1) cout << "ALG_1";
+            else cout << "ALG_2";
             cout << endl;
         }
     }
 
-      void placePiece(string pos, int player){
-            int sIdx= pos[1]- '0';
-            int iIdx= pos[3]- '0';
-            if (sIdx>=0 && sIdx< 3 && iIdx>=0 && iIdx<8){
-                squares[sIdx].intersections[iIdx].status= player;
-            }
-        }
+
+
 
 };
+
+
+
+
 
 
 
@@ -122,9 +146,9 @@ string Alg_2(){
 
 
 
-       
+
 int main()
-{ 
+{
     ifstream input("input.txt");
     ofstream output("output.txt");
 
@@ -132,27 +156,22 @@ int main()
         return 1;
     }
 
-   
+
     const int ALG_1 =1;
     const int ALG_2= 2;
     int cow;
     int score;
-    Board b;
+    Board b(cow);
+    string name;
 
-    while(input>> cow){
+    input >> cow;
+    /*while(input >> cow){
         b.TotalNumPieces= cow;
         output<<cow<<endl;
-    
-    }
-    
-    switch(cow)
-    {
 
-    case 4: 
-    case 6:
-    case 9:
-    case 12:
-        
+    }*/
+
+
 for (int i; i<cow; ++i){
     string move1, move2;
     cout<< "Alg_1 move:";
@@ -165,15 +184,14 @@ for (int i; i<cow; ++i){
     output<< "Alg_200-"<<move2<<endl;
 }
 output<<"its a draw"<<endl<<endl;
-break;
-  
-    default:
+
+if(cow != 4 && cow != 6 && cow != 9 && cow != 12 ){
         cout<<"Invalid number of pieces. Please enter 4, 6, 9, or 12."<<endl;
-        break;
-    
+
 }
 
 
+//cout << b.s[13].name << endl;
     output.close();
     input.close();
 
