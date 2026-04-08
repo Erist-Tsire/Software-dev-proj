@@ -161,7 +161,7 @@ int main()
     const int ALG_2= 2;
     int cow;
     int score;
-    Board b(cow);
+    Board b;
     string name;
 
     input >> cow;
@@ -176,11 +176,11 @@ for (int i; i<cow; ++i){
     string move1, move2;
     cout<< "Alg_1 move:";
     cin>>move1; //might not need this
-    b.placePiece(move1, ALG_1);
+    //b.placePiece(move1, ALG_1);
     output<< "Alg_100-"<<move1<<endl;
     cout<<"Alg_2 move:";
     cin>>move2;
-    b.placePiece(move2, ALG_2);
+   // b.placePiece(move2, ALG_2);
     output<< "Alg_200-"<<move2<<endl;
 }
 output<<"its a draw"<<endl<<endl;
