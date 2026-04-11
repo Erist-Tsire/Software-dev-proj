@@ -1,3 +1,5 @@
+//Student number:
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -7,55 +9,6 @@
 
 using namespace std;
 
-
-struct Game{
-
-    //ifstream input;
-    //ofstream output;
-
-
-
-
-
-   /* Game(){
-
-        input.open("input.txt");
-        output.open("output.txt");
-
-    }*/
-
-    void Placement(){
-        bool isempty = false;// check if the spot is empty
-        // maybe have a function for isempty outside of the void
-    // add placement info here
-    }
-
-    void Movement(){
-    // add movement info here
-    }
-
-    bool isMill(){
-        bool ismill = true;
-        int n = 0;
-//define a mill
-//how a mill is formed
-// maybe define mill under Game class
-    if(n==3){
-        return ismill;
-    }
-    else{
-        return false;
-    }
-    }
-
-    bool isEndGame(){
-        return false;
-    }
-
-};
-
-
-
 /*class Intersection{
 public:
     std::string label;
@@ -64,62 +17,72 @@ public:
 };*/
 
 
-class Square{
-    public:
-        std::string name;
+class Square
+{
+public:
+    std::string name;
 
-    Square(string n) : name(n){}
+    Square(string n) : name(n) {}
 };
 
 
-class Board{
+class Board
+{
 public:
-  //  vector<Intersection> i;
+    //  vector<Intersection> i;
     vector<Square> s;
-     vector<int> boardState;
+    vector<int> boardState;
     int TotalNumPieces;
 
-    Board(int cows = 0) : TotalNumPieces(cows){
-        s.push_back(Square("s2 i0"));
-        s.push_back(Square("s2 i1"));
-        s.push_back(Square("s2 i2"));
-        s.push_back(Square("s2 i3"));
-        s.push_back(Square("s2 i4"));
-        s.push_back(Square("s2 i5"));
-        s.push_back(Square("s2 i6"));
-        s.push_back(Square("s2 i7"));
 
-        s.push_back(Square("s1 i0"));
-        s.push_back(Square("s1 i1"));
-        s.push_back(Square("s1 i2"));
-        s.push_back(Square("s1 i3"));
-        s.push_back(Square("s1 i4"));
-        s.push_back(Square("s1 i5"));
-        s.push_back(Square("s1 i6"));
-        s.push_back(Square("s1 i7"));
+    Board(int cows = 0) : TotalNumPieces(cows)
+    {
+        s.push_back(Square("s2,i0"));
+        s.push_back(Square("s2,i1"));
+        s.push_back(Square("s2,i2"));
+        s.push_back(Square("s2,i3"));
+        s.push_back(Square("s2,i4"));
+        s.push_back(Square("s2,i5"));
+        s.push_back(Square("s2,i6"));
+        s.push_back(Square("s2,i7"));
 
-        s.push_back(Square("s0 i0"));
-        s.push_back(Square("s0 i1"));
-        s.push_back(Square("s0 i2"));
-        s.push_back(Square("s0 i3"));
-        s.push_back(Square("s0 i4"));
-        s.push_back(Square("s0 i5"));
-        s.push_back(Square("s0 i6"));
-        s.push_back(Square("s0 i7"));
+        s.push_back(Square("s1,i0"));
+        s.push_back(Square("s1,i1"));
+        s.push_back(Square("s1,i2"));
+        s.push_back(Square("s1,i3"));
+        s.push_back(Square("s1,i4"));
+        s.push_back(Square("s1,i5"));
+        s.push_back(Square("s1,i6"));
+        s.push_back(Square("s1,i7"));
+
+        s.push_back(Square("s0,i0"));
+        s.push_back(Square("s0,i1"));
+        s.push_back(Square("s0,i2"));
+        s.push_back(Square("s0,i3"));
+        s.push_back(Square("s0,i4"));
+        s.push_back(Square("s0,i5"));
+        s.push_back(Square("s0,i6"));
+        s.push_back(Square("s0,i7"));
 
         boardState.resize(s.size(), 0);
 
     }
 
-    void placePiece(int idx, int player) {
-        if (idx >= 0 && idx < (int)s.size() && boardState[idx] == 0) {
+
+
+
+    void placePiece(int idx, int player)
+    {
+        if (idx >= 0 && idx < (int)s.size() && boardState[idx] == 0)
+        {
             boardState[idx] = player;
         }
-    }
 
 
-    void printBoard() const {
-        for (int i = 0; i < (int)s.size(); ++i) {
+    void printBoard() const
+    {
+        for (int i = 0; i < (int)s.size(); ++i)
+        {
             cout << s[i].name << ": ";
             if (boardState[i] == 0) cout << "EMPTY";
             else if (boardState[i] == 1) cout << "ALG_1";
@@ -128,7 +91,32 @@ public:
         }
     }
 
-
+    vector<vector<int>> Adj_pos ={
+    {1,7,8},     // 0 connects to 1,7,8
+    {0,2,9},     // 1 connects to 0,2,9
+    {1,3,10},    // 2 connects to 1,3,10
+    {2,4,11},    // 3 connects to 2,4,11
+    {3,5,12},    // 4 connects to 3,5,12
+    {4,6,13},    // 5 connects to 4,6,13
+    {5,7,14},    // 6 connects to 5,7,14
+    {0,6,15},    // 7 connects to 0,6,15
+    {9,15,0,16},
+    {8,10,1,17},
+    {9,11,2,18},
+    {10,12,3,19},
+    {11,13,4,20},
+    {12,14,5,21},
+    {13,15,6,22},
+    {8,14,7,23},
+    {17,23,8},
+    {16,18,9},
+    {17,19,10},
+    {18,20,11},
+    {19,21,12},
+    {20,22,13},
+    {21,23,14},
+    {16,22,15}
+};
 
 
 };
@@ -136,10 +124,70 @@ public:
 
 
 
+void Placement()
+{
+    bool isempty = false;// check if the spot is empty
+    // maybe have a function for isempty outside of the void
+    // add placement info here
+}
+
+void Movement()
+{
+    // add movement info here
+}
 
 
 
-string Alg_2(){
+bool isMill(const Board& b, int player)
+{
+    vector<vector<int>> mills =
+    {
+        //outer layer
+        {0,1,2}, {2,3,4},{4,5,6}, {6,7,0},
+        //middle layer
+        {8,9,10}, {10,11,12}, {12,13,14}, {14,15,8},
+        //inner layer
+        {16,17,18}, {18,19,20}, {20,21,22}, {22,23,16},
+        //vertical or diagonal conection(outer,middle,inner)
+        {0,8,16},{2,10,18},{4,12,20}, {6,14,22},
+
+    };
+
+    for (auto& mill : mills)
+    {
+        if (b.boardState[mill[0]] == player &&
+                b.boardState[mill[1]] == player &&
+                b.boardState[mill[2]] == player)
+        {
+            return true;
+        }
+    }
+    return false;
+
+
+}
+/*bool ismill = true;
+int n = 0;*/
+//define a mill
+//how a mill is formed
+// maybe define mill under Game class
+/*  if(n==3){
+      return ismill;
+  }
+  else{
+      return false;
+  }
+  }*/
+
+
+bool isEndGame()
+{
+    return false;
+}
+
+
+string Alg_2()
+{
     //not sure if I should do it like this or just have a class for it
 
 }
@@ -150,9 +198,10 @@ string Alg_2(){
 int main()
 {
     ifstream input("input.txt");
-    ofstream output("output.txt");
+    ofstream output("morabarabaResults.txt");
 
-    if(!input.is_open()){
+    if(!input.is_open())
+    {
         return 1;
     }
 
@@ -165,30 +214,55 @@ int main()
     string name;
 
     input >> cow;
-    /*while(input >> cow){
-        b.TotalNumPieces= cow;
-        output<<cow<<endl;
+    // while(input >> cow){
+    b.TotalNumPieces= cow;
+    output<<cow<<endl;
+    //cout << cow << endl;
 
-    }*/
+    //}
 
 
-for (int i; i<cow; ++i){
-    string move1, move2;
-    cout<< "Alg_1 move:";
-    cin>>move1; //might not need this
-    //b.placePiece(move1, ALG_1);
-    output<< "Alg_100-"<<move1<<endl;
-    cout<<"Alg_2 move:";
-    cin>>move2;
-   // b.placePiece(move2, ALG_2);
-    output<< "Alg_200-"<<move2<<endl;
-}
-output<<"its a draw"<<endl<<endl;
 
-if(cow != 4 && cow != 6 && cow != 9 && cow != 12 ){
+
+    int move1, move2;
+
+    if(cow == 4 || cow == 6 || cow == 9 || cow == 12)
+    {
+
+        for (int i; i<cow; ++i)
+        {
+
+            cout<< "Alg_1 move:";
+            cin>>move1; //might not need this
+            b.placePiece(move1, ALG_1);
+            output<< "Alg_100-"<<move1<<endl;
+            if (isMill(b, ALG_1))
+            {
+                cout << "Alg_1 formed a mill!" << endl;
+            }
+
+
+            cout<<"Alg_2 move:";
+            cin>>move2;
+            b.placePiece(move2, ALG_2);
+            output<< "Alg_200-"<<move2<<endl;
+
+            if (isMill(b, ALG_1))
+            {
+                cout << "Alg_1 formed a mill!" << endl;
+            }
+
+
+        }
+        output<<"its a draw"<<endl<<endl;
+
+    }
+    else
+    {
         cout<<"Invalid number of pieces. Please enter 4, 6, 9, or 12."<<endl;
+    }
 
-}
+    b.printBoard();
 
 
 //cout << b.s[13].name << endl;
